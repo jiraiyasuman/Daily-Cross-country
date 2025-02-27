@@ -5,6 +5,7 @@
 package com.mycompany.practice.spring.librarymanagementsystem.entity;
 
 import java.time.LocalDate;
+import java.util.logging.Logger;
 
 /**
  *
@@ -15,6 +16,7 @@ public class BillingFine {
     private int fineId;
     private String studentName;
     private int studentId;
+    private int issueId;
     private int bookId;
     private String bookName;
     private String bookAuthor;
@@ -31,10 +33,19 @@ public class BillingFine {
         this.days = days;
     }
 
-    public BillingFine(int fineId, String studentName, int studentId, int bookId, String bookName, String bookAuthor, LocalDate issueDate, LocalDate returnDate, double fine, int days) {
+    public int getIssueId() {
+        return issueId;
+    }
+
+    public void setIssueId(int issueId) {
+        this.issueId = issueId;
+    }
+
+    public BillingFine(int fineId, String studentName, int studentId, int issueId, int bookId, String bookName, String bookAuthor, LocalDate issueDate, LocalDate returnDate, double fine, int days) {
         this.fineId = fineId;
         this.studentName = studentName;
         this.studentId = studentId;
+        this.issueId = issueId;
         this.bookId = bookId;
         this.bookName = bookName;
         this.bookAuthor = bookAuthor;
@@ -43,6 +54,9 @@ public class BillingFine {
         this.fine = fine;
         this.days = days;
     }
+    private static final Logger LOG = Logger.getLogger(BillingFine.class.getName());
+
+   
 
     public BillingFine() {
     }

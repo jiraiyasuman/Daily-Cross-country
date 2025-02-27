@@ -18,7 +18,7 @@ public class IssueBooks {
     private boolean statusBooks;
     private int studentId;
     private int bookId;
-
+    
     public int getStudentId() {
         return studentId;
     }
@@ -52,10 +52,7 @@ public class IssueBooks {
         this.statusBooks = statusBooks;
         this.studentId = studentId;
         this.bookId = bookId;
-    }
-    
-    
-    
+    } 
     public boolean isStatusBooks() {
         return statusBooks;
     }
@@ -105,7 +102,4 @@ public class IssueBooks {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
-    
-    
 }

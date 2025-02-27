@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,6 +18,9 @@ import java.util.Random;
  */
 public class BillingFineServiceImpl implements BillingFineService{
 
+    private static final Logger LOG = Logger.getLogger(BillingFineServiceImpl.class.getName());
+
+    
     List<BillingFine> billingForm = new ArrayList<>();
     @Override
     public BillingFine addBill(String studentName, int studentId, int bookId, String bookName, String bookAuthor, LocalDate issueDate, LocalDate returnDate, double fine, int days) {
